@@ -11,6 +11,54 @@ html, body {
   width: 100%;
 }
 
+body.cloudy {
+  background: linear-gradient(135deg, #d7d2cc, #304352);
+  transition: background 1s ease-in-out; 
+}
+
+body.rainy {
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+}
+
+body.storm {
+  background: linear-gradient(135deg, #434343, #000000);
+}
+
+body.sunny {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+}
+.Day-cast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Day-cast:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.forecast-card.sunny{
+  background-color: rgba(255, 233, 0, 0.2);
+}
+.forecast-card.cloudy {
+  background-color: rgba(192, 192, 192, 0.2);
+}
+
+.forecast-card.rainy {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.forecast-card.storm {
+  background-color: rgba(64, 64, 64, 0.2);
+}
+
+
 /* BACKGROUNDS */
 body.sunny { background: linear-gradient(to right, #fbd786, #f7797d); }
 body.cloudy { background: linear-gradient(to right, #bdc3c7, #2c3e50); }
@@ -105,18 +153,20 @@ nav a:hover { color: #ffd700; }
   background-repeat: no-repeat;
   animation: float 2s infinite ease-in-out;
 }
-.sunny-icon { background-image: url('https://i.ibb.co/x2BqJX3/sun.png'); }
-.cloudy-icon { background-image: url('https://i.ibb.co/kx6kQ6C/cloud.png'); }
-.rain-icon { background-image: url('https://i.ibb.co/3vHjvVL/rain.png'); }
-.storm-icon { background-image: url('https://i.ibb.co/YTg0kJK/storm.png'); }
+.sunny-icon { background-image: url(Images/sun.png); }
+.cloudy-icon { background-image: url(Images/cloud.png); }
+.rain-icon { background-image: url(Images/rain.png); }
+.storm-icon { background-image: url(Images/storm.png); }
 
 /* FORECAST CAROUSEL */
 .forecast-carousel { margin-bottom: 2rem; width: 100%; }
 .forecast-wrapper {
   display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 0;
 }
 .forecast-card {
   min-width: 120px;

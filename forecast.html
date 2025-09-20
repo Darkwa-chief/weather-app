@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherApp - Forecast</title>
+  <link rel="stylesheet" href="Weather.css">
+</head>
+<body class="cloudy">
+  <div class="app-container">
+
+    <!-- Header -->
+    <header>
+      <h1>WeatherApp ☀️</h1>
+      <nav>
+        
+        <a href="forecast.html">Forecast</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <input type="text" placeholder="Enter city...">
+      <button>Search</button>
+    </section>
+
+    <!-- 7-Day Forecast Carousel -->
+    <section class="forecast-carousel">
+      <h2>7-Day Forecast</h2>
+      <div class="forecast-wrapper">
+        <div class="forecast-card sunny">
+          <div class="icon sunny-icon"></div>
+          Mon: 28°C
+        </div>
+        <div class="forecast-card cloudy">
+          <div class="icon cloudy-icon"></div>
+          Tue: 24°C
+        </div>
+        <div class="forecast-card rainy">
+          <div class="icon rain-icon"></div>
+          Wed: 22°C
+        </div>
+        <div class="forecast-card sunny">
+          <div class="icon sunny-icon"></div>
+          Thu: 27°C
+        </div>
+        <div class="forecast-card storm">
+          <div class="icon storm-icon"></div>
+          Fri: 20°C
+        </div>
+        <div class="forecast-card cloudy">
+          <div class="icon cloudy-icon"></div>
+          Sat: 23°C
+        </div>
+        <div class="forecast-card sunny">
+          <div class="icon sunny-icon"></div>
+          Sun: 28°C
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather Alerts Panel -->
+    <section class="alerts-panel">
+      <h2>Weather Alerts</h2>
+      <div class="alert-card">⚠️ Thunderstorm expected on Friday</div>
+      <div class="alert-card">🌤 Sunny days ahead this weekend</div>
+    </section>
+
+    <!-- Recent Cities Panel -->
+    <section class="recent-cities">
+      <h2>Recent Cities</h2>
+      <div class="cities-wrapper">
+        <button>New York</button>
+        <button>London</button>
+        <button>Tokyo</button>
+        <button>Paris</button>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

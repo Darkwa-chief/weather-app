@@ -1,0 +1,186 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* BACKGROUNDS */
+body.sunny { background: linear-gradient(to right, #fbd786, #f7797d); }
+body.cloudy { background: linear-gradient(to right, #bdc3c7, #2c3e50); }
+body.rainy { background: linear-gradient(to right, #4e54c8, #8f94fb); }
+body.storm { background: linear-gradient(to right, #434343, #000000); }
+
+/* APP CONTAINER */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 1rem;
+  transition: background 1s ease-in-out;
+}
+
+/* HEADER + NAV */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover { color: #ffd700; }
+
+/* SEARCH SECTION */
+.search-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 700px;
+}
+.search-section input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+}
+.search-section button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+.search-section button:hover {
+  transform: scale(1.1);
+  background: #e6c200;
+}
+
+/* WEATHER CARD */
+.weather-card {
+  background: rgba(0,0,0,0.35);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+.weather-details p { margin: 0.5rem 0; }
+
+/* ICONS */
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: float 2s infinite ease-in-out;
+}
+.sunny-icon { background-image: url('https://i.ibb.co/x2BqJX3/sun.png'); }
+.cloudy-icon { background-image: url('https://i.ibb.co/kx6kQ6C/cloud.png'); }
+.rain-icon { background-image: url('https://i.ibb.co/3vHjvVL/rain.png'); }
+.storm-icon { background-image: url('https://i.ibb.co/YTg0kJK/storm.png'); }
+
+/* FORECAST CAROUSEL */
+.forecast-carousel { margin-bottom: 2rem; width: 100%; }
+.forecast-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.forecast-card {
+  min-width: 120px;
+  background: rgba(0,0,0,0.35);
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+.forecast-card:hover { transform: translateY(-5px); }
+
+/* ALERTS PANEL */
+.alerts-panel {
+  width: 90%;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+.alert-card {
+  background: rgba(255, 69, 0, 0.6);
+  padding: 1rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* RECENT CITIES */
+.recent-cities { width: 90%; max-width: 700px; margin-bottom: 2rem; }
+.cities-wrapper { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.cities-wrapper button {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+.cities-wrapper button:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.5);
+}
+
+/* ABOUT SECTION */
+.about-section {
+  width: 90%;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+.about-section ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* ANIMATIONS */
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .forecast-wrapper { flex-direction: column; }
+  .cities-wrapper { flex-direction: column; }
+  .search-section { flex-direction: column; }
+}
